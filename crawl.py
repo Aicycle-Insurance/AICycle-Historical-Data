@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 
 from file_utils import create_folder, export_json
 from utils import get_info_single_page
-from constants import JSON_FOLDER, ROOT_FOLDER, COMPLETED_FILE, FAILED_FILE, ID_FILE
+from constants import JSON_FOLDER, ROOT_FOLDER, COMPLETED_FILE, FAILED_FILE, ID_FILE, COMPLETED_ID_FILE
 
 create_folder(ROOT_FOLDER)
 create_folder(JSON_FOLDER)
@@ -39,7 +39,8 @@ def create_driver_with_proxy():
     # Tạo tùy chọn của trình duyệt Chrome với proxy ngẫu nhiên đã chọn
     chrome_options = Options()
     chrome_options.headless = False
-    # chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-features=Permissions-Policy")
+    chrome_options.add_argument("--headless")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_prefs = {}
@@ -94,6 +95,8 @@ def run_selenium_task(i, start_id, end_id):
                     completed_links.append(link)
                     with open(COMPLETED_FILE, "a+") as file:
                         file.write(link + "\n")
+                    with open(COMPLETED_ID_FILE, "a+") as file:
+                        file.write(id + "\n")
                 except Exception as ex:
                     print(link + 'failed')
                     with open(FAILED_FILE, "a+") as file:
@@ -103,13 +106,14 @@ def run_selenium_task(i, start_id, end_id):
 try:
     with open(COMPLETED_FILE, "r") as file:
         completed_links = [line.strip().replace('\n', '') for line in file.readlines()]
-        completed_ids = [link.split('-')[-1] for link in completed_links]
-
+        # completed_ids = [link.split('-')[-1] for link in completed_links]
+    with open(COMPLETED_ID_FILE, 'r') as file:
+        completed_ids = [line.strip().replace('\n', '') for line in file.readlines()]
 except FileNotFoundError:
     pass
 
 
-def run_main(start_id: int = 4600000, end_id: int = 4600020, num_threads: int = 3):
+def run_main(start_id: int = 4600000, end_id: int = 4600100, num_threads: int = 3):
     # Số lượng ID trong mỗi thread
     ids_per_thread = (end_id - start_id + 1) // num_threads
 
