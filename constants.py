@@ -1,0 +1,5 @@
+ROOT_FOLDER = './data/'
+JSON_FOLDER = f'{ROOT_FOLDER}/json/'
+COMPLETED_FILE = f'{ROOT_FOLDER}/completed_files.txt'
+ID_FILE = f'{ROOT_FOLDER}/id_files.txt'
+FAILED_FILE = f'{ROOT_FOLDER}/failed_files.txt'
