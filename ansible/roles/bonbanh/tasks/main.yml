@@ -1,0 +1,73 @@
+---
+# tasks file for bonbanh
+
+# - name: Install repositories
+#   shell: "sudo apt update"
+#   become: true
+
+# - name: Install repositories
+#   shell: "apt install -y python3-pip && pip install --upgrade proxy.py"
+#   become: true
+
+# - name: Install repositories
+#   apt_key:
+#     url: https://dl-ssl.google.com/linux/linux_signing_key.pub
+#     state: present
+#   become: true
+
+# - name: Install repositories
+#   ansible.builtin.apt_repository:
+#     repo:  "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
+#     state: present
+#   become: true
+
+# - name: Update repositories cache and install "foo" package
+#   ansible.builtin.apt: upgrade=dist force_apt_get=yes
+#   become: true
+
+# - name: Update repositories cache and install package
+#   ansible.builtin.apt:
+#     name: "{{ item }}"
+#     update_cache: yes
+#   become: true
+#   with_items: 
+#     - python3-pip
+#     - google-chrome-stable
+#     - unzip
+
+# - name: Install repositories
+#   ansible.builtin.get_url:
+#     url: http://chromedriver.storage.googleapis.com/113.0.5672.63/chromedriver_linux64.zip
+#     dest: /tmp/chromedriver.zip
+#   become: true
+
+# - name: Extract foo.tgz into /var/lib/foo
+#   ansible.builtin.unarchive:
+#     src: /tmp/chromedriver.zip
+#     dest: /usr/local/bin/
+#     remote_src: True
+#   become: true
+
+# - name: Git Clone reporitories
+#   ansible.builtin.git:
+#     # repo: 'https://github.com/daidoAI/bonbanh_data.git'
+#     repo: 'https://github.com/manhtd98/AICycle-Historical-Data.git'
+#     dest: /home/ubuntu/bonbanh_dist
+
+# - name: Install dependencies
+#   shell: "pip install -r /home/ubuntu/bonbanh_dist/requirements.txt"
+
+- name: Git checkout
+  shell: "cd /home/ubuntu/bonbanh_dist/ && git pull"
+
+
+# - name: Remove "foo" package
+#   ansible.builtin.apt:
+#     name: chromium-browser
+#     state: absent
+#   become: true
+
+# - name: Git checkout
+#   shell: "cd /home/ubuntu/bonbanh_dist/ && python3 crawl.py --start 100000 --end 1000000 --thread 2"
+#   async: 45
+#   poll: 0

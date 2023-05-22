@@ -1,0 +1,5 @@
+---
+# tasks file for onpr
+
+- name: Install repositories
+  shell: pip install proxy.py

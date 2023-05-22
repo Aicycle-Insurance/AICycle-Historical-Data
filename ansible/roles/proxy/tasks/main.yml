@@ -1,0 +1,11 @@
+---
+# tasks file for proxy
+- name: Get running processes
+  shell: "ps -ef | grep python  | awk '{print $2}'"
+  register: running_processes
+  become: true
+
+- name: Kill running processes
+  shell: "kill -9 {{ item }}"
+  with_items: "{{ running_processes.stdout_lines }}"
+  become: true

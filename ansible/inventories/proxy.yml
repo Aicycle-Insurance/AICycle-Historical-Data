@@ -1,0 +1,63 @@
+all:
+  children:
+    controller:
+      hosts:
+        p1:
+          ansible_ssh_host: 13.251.127.34
+          ansible_python_interpreter: /usr/bin/python3
+          ansible_user: ubuntu
+          ansible_ssh_private_key_file: ~/seta/manhtd6932/crawl-data.pem
+
+        p2:
+          ansible_ssh_host: 13.250.204.172
+          ansible_python_interpreter: /usr/bin/python3
+          ansible_user: ubuntu
+          ansible_ssh_private_key_file: ~/seta/manhtd6932/crawl-data.pem
+          
+        p3:
+          ansible_ssh_host: 13.250.42.59
+          ansible_python_interpreter: /usr/bin/python3
+          ansible_user: ubuntu
+          ansible_ssh_private_key_file: ~/seta/manhtd6932/crawl-data.pem
+        
+        p4:
+          ansible_ssh_host: 18.141.189.235
+          ansible_python_interpreter: /usr/bin/python3
+          ansible_user: ubuntu
+          ansible_ssh_private_key_file: ~/seta/manhtd6932/crawl-data.pem
+        
+        p5:
+          ansible_ssh_host: 3.0.99.75
+          ansible_python_interpreter: /usr/bin/python3
+          ansible_user: ubuntu
+          ansible_ssh_private_key_file: ~/seta/manhtd6932/crawl-data.pem
+        
+        p6:
+          ansible_ssh_host: 13.212.246.164
+          ansible_python_interpreter: /usr/bin/python3
+          ansible_user: ubuntu
+          ansible_ssh_private_key_file: ~/seta/manhtd6932/crawl-data.pem
+        
+        p7:
+          ansible_ssh_host: 54.179.91.224
+          ansible_python_interpreter: /usr/bin/python3
+          ansible_user: ubuntu
+          ansible_ssh_private_key_file: ~/seta/manhtd6932/crawl-data.pem
+        
+        p8:
+          ansible_ssh_host: 54.255.205.203
+          ansible_python_interpreter: /usr/bin/python3
+          ansible_user: ubuntu
+          ansible_ssh_private_key_file: ~/seta/manhtd6932/crawl-data.pem
+        
+        p9:
+          ansible_ssh_host: 13.229.97.173
+          ansible_python_interpreter: /usr/bin/python3
+          ansible_user: ubuntu
+          ansible_ssh_private_key_file: ~/seta/manhtd6932/crawl-data.pem
+        
+        p10:
+          ansible_ssh_host: 13.250.39.147
+          ansible_python_interpreter: /usr/bin/python3
+          ansible_user: ubuntu
+          ansible_ssh_private_key_file: ~/seta/manhtd6932/crawl-data.pem
