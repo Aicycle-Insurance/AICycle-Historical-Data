@@ -1,1 +1,0 @@
-sudo docker run -it -v $(pwd):/workspace img python3 crawl.py --start 1000000 --end 2000000

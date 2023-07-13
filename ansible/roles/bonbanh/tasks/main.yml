@@ -1,13 +1,13 @@
 ---
 # tasks file for bonbanh
 
-# - name: Install repositories
-#   shell: "sudo apt update"
-#   become: true
+- name: Install repositories
+  shell: "sudo apt update"
+  become: true
 
-# - name: Install repositories
-#   shell: "apt install -y python3-pip && pip install --upgrade proxy.py"
-#   become: true
+- name: Install repositories
+  shell: "apt install -y python3-pip && pip install --upgrade proxy.py"
+  become: true
 
 # - name: Install repositories
 #   apt_key:
@@ -57,8 +57,8 @@
 # - name: Install dependencies
 #   shell: "pip install -r /home/ubuntu/bonbanh_dist/requirements.txt"
 
-- name: Git checkout
-  shell: "cd /home/ubuntu/bonbanh_dist/ && git pull"
+# - name: Git checkout
+#   shell: "cd /home/ubuntu/bonbanh_dist/ && git pull"
 
 
 # - name: Remove "foo" package

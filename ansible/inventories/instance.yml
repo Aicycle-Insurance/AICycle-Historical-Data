@@ -3,62 +3,27 @@ all:
     controller:
       hosts:
         node1:
-          ansible_ssh_host: 18.143.152.63
+          ansible_ssh_host: 13.251.127.34
           ansible_python_interpreter: /usr/bin/python3
           ansible_user: ubuntu
           ansible_ssh_private_key_file: ~/seta/manhtd6932/crawl-data.pem
 
         node2:
-          ansible_ssh_host: 13.214.138.74
+          ansible_ssh_host: 13.250.204.172
           ansible_python_interpreter: /usr/bin/python3
           ansible_user: ubuntu
           ansible_ssh_private_key_file: ~/seta/manhtd6932/crawl-data.pem
         
         node3:
-          ansible_ssh_host: 13.212.184.197
+          ansible_ssh_host: 13.250.42.59
           ansible_python_interpreter: /usr/bin/python3
           ansible_user: ubuntu
           ansible_ssh_private_key_file: ~/seta/manhtd6932/crawl-data.pem
         
         node4:
-          ansible_ssh_host: 18.138.225.127
+          ansible_ssh_host: 54.169.220.42
           ansible_python_interpreter: /usr/bin/python3
           ansible_user: ubuntu
           ansible_ssh_private_key_file: ~/seta/manhtd6932/crawl-data.pem
         
-        node5:
-          ansible_ssh_host: 13.212.108.107
-          ansible_python_interpreter: /usr/bin/python3
-          ansible_user: ubuntu
-          ansible_ssh_private_key_file: ~/seta/manhtd6932/crawl-data.pem
-        
-        node6:
-          ansible_ssh_host: 13.214.142.150
-          ansible_python_interpreter: /usr/bin/python3
-          ansible_user: ubuntu
-          ansible_ssh_private_key_file: ~/seta/manhtd6932/crawl-data.pem
-        
-        node7:
-          ansible_ssh_host: 18.142.114.68
-          ansible_python_interpreter: /usr/bin/python3
-          ansible_user: ubuntu
-          ansible_ssh_private_key_file: ~/seta/manhtd6932/crawl-data.pem
-        
-        node8:
-          ansible_ssh_host: 13.212.16.90
-          ansible_python_interpreter: /usr/bin/python3
-          ansible_user: ubuntu
-          ansible_ssh_private_key_file: ~/seta/manhtd6932/crawl-data.pem
-        
-        node9:
-          ansible_ssh_host: 18.143.189.24
-          ansible_python_interpreter: /usr/bin/python3
-          ansible_user: ubuntu
-          ansible_ssh_private_key_file: ~/seta/manhtd6932/crawl-data.pem
-        
-        node10:
-          ansible_ssh_host: 18.141.3.222
-          ansible_python_interpreter: /usr/bin/python3
-          ansible_user: ubuntu
-          ansible_ssh_private_key_file: ~/seta/manhtd6932/crawl-data.pem
-      
+       
